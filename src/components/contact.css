@@ -1,0 +1,57 @@
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px ;
+  }
+  .contact-address{
+    width:400px;
+  }
+  .contact-address h2{
+    /* margin-top: 20px; */
+    font-size: large;
+    font-weight:600;
+    text-align: left;
+    
+  }
+  .contact-address p{
+    text-align: left;
+    font-size: large;
+  }
+  .contact-map iframe{
+    height:50vh;
+    width:50vw;
+  }
+  .contact-map h2{
+    /* margin-top: 20px; */
+    font-size: large;
+    font-weight:600;
+    text-align: left;
+    
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .contact-container {
+      flex-direction: row;
+    }
+  }
+  
+  .contact-address {
+    margin-bottom: 2rem;
+  }
+  
+  .contact-map {
+    flex: 1;
+    height: 400px;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .contact-address {
+      flex: 1;
+      margin-right: 2rem;
+    }
+  
+    .contact-map {
+      flex: 2;
+    }
+  }
+  
