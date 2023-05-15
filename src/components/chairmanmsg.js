@@ -1,6 +1,6 @@
 import React from 'react'
 
-const HodMsg = () => {
+const ChairmanMsg = () => {
     return (
         <div style={
             {marginBottom: "30px"}
@@ -17,7 +17,7 @@ const HodMsg = () => {
                 }
             }>
 
-Message From The HodMsg
+Message From The Chairman
             </div>
             <div style={
                 {
@@ -63,7 +63,7 @@ Message From The HodMsg
                             fontFamily: "Montserrat , sans-serif",
                             fontStyle:"italic",
                             color:"black",
-                            fontWeight:"900"}}>The Department of Computer Science Engineering at IIT Hyderabad offers a vibrant environment for under graduate, post graduate education and research in many areas of Computer Science Engineering. We are a team of faculty and staff members engaged in cutting edge research and teaching in several frontier areas of Computer Science Engineering.</p>  
+                            fontWeight:"900"}}> The difference between the dreamer and innovator is that a dreamer just dreams and an innovator creates his own path to realize ideas which others think as impossible. That streak of originality is the distinct quality that makes Dr. Satya Prakash Panda, Chairman, Gandhi Group as the brightest star of education horizon of Eastern India.</p>  
                     
                     <div style={
                 {
@@ -75,7 +75,7 @@ Message From The HodMsg
                     fontWeight:"900"
                     
                 }}>
-                    Dr. Parimal Ku Giri, GITA Bhubaneswar
+                    Dr. SATYA PRAKASH PANDA,GITA Bhubaneswar
                     </div>
 
                 </div>
@@ -86,4 +86,4 @@ Message From The HodMsg
     )
 }
 
-export default HodMsg
+export default ChairmanMsg

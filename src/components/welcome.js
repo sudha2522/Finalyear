@@ -36,7 +36,7 @@ const Welcome = () => {
                     <p style={
                         {fontSize: "2rem",lineHeight:"40px"}
                     }>
-                        The Department of Electrical Engineering (EE) at IIT Hyderabad offers a vibrant environment for under graduate, post graduate education and research in many areas of Electrical Engineering. We are a team of 32 faculty (28 fulltime + 4 visiting), 476 students (192 BTech, 122 MTech and 162 PhD) and 4 staff members engaged in cutting edge research and teaching in several frontier areas of Electrical Engineering.
+                        Widely appreciated as a royal department of GITA , the department of computer science & Engineering was established in 2004 with an initial intake of 60 seats and subsequently increased to 120 seats in 2009. The department strives to imbibe cutting-edge skills through research and development, industrial consultancy and high quality teaching.
                     </p>
 
                 </div>
