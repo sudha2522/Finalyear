@@ -3,7 +3,7 @@ import './contact.css'; // import your custom stylesheet
 
 function Footers(){
   return (
-    <div className="contact-container" style={{backgroundColor:"rgb(8, 39, 65)",color:"white",padding:"50px"}}>
+    <div className="contact-container" style={{backgroundColor:"#17594A",color:"white",padding:"50px"}}>
     <div className="contact-address">
       <h2>Contact Us</h2>
       <p>

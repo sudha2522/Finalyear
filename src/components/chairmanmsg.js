@@ -40,12 +40,12 @@ Message From The Chairman
                             { // width: "280px",
                         textAlign:"center",
 
-                                height: "300px",
+                                height: "200px",
                           borderRadius:"50px"
 
                             }
                         }
-                        src="image.png"/>
+                        src="https://www.gita.edu.in/gita/assets/images/chairman.jpg"/>
 
                 </div>
                 <div style={

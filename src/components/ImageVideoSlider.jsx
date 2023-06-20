@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
+// import "./codepen.css"
+// import VisionMission from "./VisionMission";
 import "./codepen.css"
-import VisionMission from "./VisionMission";
 
 const ImageSlider = () => {
   

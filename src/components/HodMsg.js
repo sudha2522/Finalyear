@@ -40,12 +40,12 @@ Message From The HodMsg
                             { // width: "280px",
                         textAlign:"center",
 
-                                height: "300px",
+                                height: "200px",
                           borderRadius:"50px"
 
                             }
                         }
-                        src="image.png"/>
+                        src="hod.jpg"/>
 
                 </div>
                 <div style={

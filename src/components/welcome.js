@@ -51,7 +51,7 @@ const Welcome = () => {
                     {
                         // width: "280px",
                         height: "280px"
-                    }} src="https://ee.iith.ac.in/images/website2.jpg"/>
+                    }} src="welcome.avif"/>
 
                 </div>
             </div>

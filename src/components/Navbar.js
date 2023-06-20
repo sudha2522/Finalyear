@@ -1,12 +1,6 @@
 import {React, useEffect} from 'react'
-import DropDown from './DropDown'
-import Faculties from './Faculties'
 import {useState} from 'react'
-import Calender from './Calender'
-import Curriculum from './Curriculum'
-import {Link as Scroll} from 'react-scroll';
 import {Navigate, NavLink} from "react-router-dom"
-import Rdcell from './Rdcell'
 import {useNavigate} from 'react-router-dom'
 import {
     Menu,
@@ -19,9 +13,6 @@ import {
     MenuDivider,
     Stack
 } from '@chakra-ui/react'
-import {Select} from '@chakra-ui/react'
-import {ChevronDownIcon} from "@chakra-ui/icons";
-import GoogleSignInButton from './LoginButton'
 import {isAuthenticated, signout} from '../auth/helper'
 import axios from 'axios'
 const Navbar = () => {
@@ -103,9 +94,9 @@ const Navbar = () => {
                 }>
                     <div style={
                         {
-                            width: "20%",
+                            width: "40%",
                             display: 'flex',
-                            justifyContent: 'start',
+                            justifyContent: 'start ',
                             alignItems: 'center'
                         }
                     }>
@@ -120,14 +111,28 @@ const Navbar = () => {
 
                             <img src="
                             /images/collegeImage.jpg" className='iiitim'></img>
+                            
                         </div>
+                        <p style={{fontSize:"2rem",marginLeft:"3.5rem",color:"#D3D04F",fontFamily:"italic"}}>GITA Autonomous College Bhubaneswar</p>
+
                     </div>
                     <div style={
                         {
                             width: "60%",
                             display: 'flex',
-                            justifyContent: 'space-around',
-                            alignItems: 'center'
+                         justifyContent: 'end',
+                            alignItems: 'center',
+                            paddingRight:"2rem"
+                            // backgroundColor:"red"
+                        }
+                    }>
+                    <div style={
+                        {
+                            // width: "80%",
+                            display: 'flex',
+                            justifyContent: 'space-between',
+                            alignItems: 'center',
+                            // backgroundColor:"yellow"
                         }
                     }>
 
@@ -137,32 +142,18 @@ const Navbar = () => {
                             
 
 
-                            <li onClick={toggleDropdown}
-                                className="nav-item">
-                                <div 
-                                    className="nav links f">People &#9662;</div>
-                                {
-                                isOpen && (
-                                    <ul className="dropdown-menu">
-                                        <li>
-                                            <NavLink to="/faculties">Faculties</NavLink>
-                                        </li>
-                                        <li>
-                                            <NavLink to="/blank">Department Coordinator</NavLink>
-                                        </li>
-                                        <li>
-                                            <NavLink to="/research">Research Scholar</NavLink>
-                                        </li>
-                                        <li>
-                                            <NavLink to="/blank">Staff</NavLink>
-                                        </li>
-                                    </ul>
-                                )
-                            } </li>
+                         
                     
-
+                    <li className="nav-item">
+                            <NavLink to="/faculties" activeClassName="active" className="nav-links f"
+                                onClick={
+                                    click ? handleClick : null
+                            }>
+                                Faculties
+                            </NavLink>
+                        </li>
                         <li className="nav-item">
-                            <NavLink to="https://iiit-bh.almaconnect.com/alumni?frm=main_menu" activeClassName="active" className="nav-links f"
+                            <NavLink to="/lab" activeClassName="active" className="nav-links f"
                                 onClick={
                                     click ? handleClick : null
                             }>
@@ -170,37 +161,21 @@ const Navbar = () => {
                             </NavLink>
                         </li>
                 
-                  
-                        <li onClick={toggleDropdown}
-                            className="nav-item">
-                            <div 
-                                className="nav links f">Research &#9662;</div>
-                            {
-                            isOpen && (
-                                <ul className="dropdown-menu">
-                                    <li>
-                                        <NavLink to="/researchArea">Research Areas</NavLink>
-                                    </li>
-                                   
-                                    <li>
-                                        <NavLink to="/publication">Publication</NavLink>
-                                    </li>
-                                    <li>
-                                        <NavLink to="/publication">Research Groups</NavLink>
-                                    </li>
-                                  
-                                </ul>
-                            )
-                        } </li>
-
-
-
                         <li className="nav-item">
-                            <NavLink exact to="/contactus" activeClassName="active" className="nav-links f"
+                            <NavLink to="/researchArea" activeClassName="active" className="nav-links f"
                                 onClick={
                                     click ? handleClick : null
                             }>
-                                Curriculum
+                                Research
+                            </NavLink>
+                        </li>
+    
+                      <li className="nav-item">
+                            <NavLink exact to="/activity" activeClassName="active" className="nav-links f"
+                                onClick={
+                                    click ? handleClick : null
+                            }>
+                                Activity
                             </NavLink>
                         </li>
                         <li className="nav-item">
@@ -218,6 +193,7 @@ const Navbar = () => {
 
 
                     </div>
+                    </div>
                     <div className="nav-icon"
                         onClick={handleClick}>
                         <i className={
@@ -226,62 +202,8 @@ const Navbar = () => {
                     </div>
 
 
-                    <div style={
-                        {
-                            width: "20%",
-                            // height: "100%",
-                            display: 'flex',
-                            // flexDirection: 'column',
-                            justifyContent: 'center ',
-                            alignItems: 'end'
-
-                        }
-                    }>
-                        <div style={
-                            {
-                                // width: "80%",
-                                height: "100%",
-                                fontSize: '1rem',
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'end'
-
-                            }
-                        }>
-
-                            <div> {
-                                isAuthenticated() && user.role === 1 && <button className={
-                                        centeredPlaceholder.join(" ")
-                                    }
-                                    onClick={
-                                        () => {
-                                            navigate('/update')
-                                        }
-                                }>
-                                    Update Profile
-                                </button>
-                            } </div>
-                            <div className={
-                                logo.join(" ")
-                            }>
-                                {
-
-                                !isAuthenticated() ? <GoogleSignInButton/>: <button style={
-                                        {
-                                            backgroundColor: "red",
-                                            borderRadius: "10px",
-                                            padding: "10px",
-                                            color: "white",
-                                            fontSize: "1.2rem"
-                                        }
-                                    }
-                                    onClick={signout}>Log out</button>
-                            } </div>
-
-                        </div>
-
-
-                    </div>
+             
+                     
 
                 </Stack>
 
