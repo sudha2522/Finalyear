@@ -3,7 +3,7 @@ import Base from "./Base";
 import { activites } from "./activityachi";
 // import { Button } from 'react-scroll'
 
-const Activity = () => {
+const Activites = () => {
   return (
     <Base>
       <div
@@ -15,7 +15,7 @@ const Activity = () => {
           margin: "15px auto 0 auto",
         }}
       >
-        Achievements
+        Activites
       </div>
       {/* <hr style={{ marginTop: "1rem", marginBottom: "1rem", border: "0", borderTop: "1px solid rgba(0,0,0,.1)" }} /> */}
       <div>
@@ -87,4 +87,4 @@ const Activity = () => {
   );
 };
 
-export default Activity;
+export default Activites;

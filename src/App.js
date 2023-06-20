@@ -10,6 +10,7 @@ import RsearchArea from './components/RsearchArea';
 import Labo from './components/Labo';
 import './components/style.css'
 import Activity from './components/Activity';
+import Activites from './components/Activity';
 function App() {
   return (
     <ChakraProvider>
@@ -20,7 +21,7 @@ function App() {
       <Route path='/Faculties' element={<Faculties/>}/>
 
       <Route path='footer' element={<Footers/>}/>
-      <Route path='/activity' element={<Activity/>}/>
+      <Route path='/activity' element={<Activites/>}/>
       <Route path='/researchArea' element={<RsearchArea/>}/>
       <Route path='/lab' element={<Labo/>}/>
       <Route path='/contactus' element={<Contact/>}/>
